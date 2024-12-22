@@ -1,0 +1,176 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "ownerAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "errorMsg",
+						"type": "string"
+					}
+				],
+				"name": "InvalidOwnerAddress",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "senderAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "FallBackMoneyAddedToChain",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "senderAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "MoneyAddedToChainByAddress",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "oldOwnerAddress",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwnerAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timeStamp",
+						"type": "uint256"
+					}
+				],
+				"name": "OwnerChangedTo",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "burn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/walletrecursivecontract/BankContract.sol": "BankContract"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/walletrecursivecontract/BankContract.sol": {
+			"keccak256": "0xa98e2299b4d084501f905c7a8c98ae63a0ed8769dc0db76df626e1c8a8fd2cba",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9b8fc2f8af88f9146da099edef618b4152bb3bdf0b172d2b46d0f6a0217a0387",
+				"dweb:/ipfs/QmZ1x4AaGgsTJTdVsdk5BKMLFnCYN4EuxRjSz2nhJ2TLSF"
+			]
+		},
+		"contracts/walletrecursivecontract/IBankContract.sol": {
+			"keccak256": "0x74d8870c113ce4d7217a4a976c4aae630ae7f38bb835e0c59444409fc49a3962",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8413b5c7477115fd39d084f63ad1069085e6190bf272270d075738cdeeedead7",
+				"dweb:/ipfs/QmasCJDDxRVxehRzQFb8JRg73kHkUFWp2dptGs62JypAhX"
+			]
+		},
+		"contracts/walletrecursivecontract/Ownable.sol": {
+			"keccak256": "0x2bf3f6f3015ce92dc958cbbeb75652ad73e0e6e8cf70e157ec28785a2a4face7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a5de2f50107d8adaa53f9f74eb724ff2d363bd541435b4616418f27aa2f92435",
+				"dweb:/ipfs/QmXqPfTaJMqrcfQoCZpuDF5yvkEL9xMtetbSAthMf5VbpK"
+			]
+		}
+	},
+	"version": 1
+}

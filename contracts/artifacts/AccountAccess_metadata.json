@@ -1,0 +1,127 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "initialOwner",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "sentAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "errorMsg",
+						"type": "string"
+					}
+				],
+				"name": "InvalidAddress",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "oldOwnerAddress",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwnerAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timeStamp",
+						"type": "uint256"
+					}
+				],
+				"name": "OwnerShipChangedTo",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "grantAdminRole",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/RoleAccess.sol": "AccountAccess"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/IConstant.sol": {
+			"keccak256": "0x09db45b696da89f85115ee788939282eb31a703f08918829489b1fe1234cf83d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://739e9c03faea6ab4b4e838e5707fc0300734a7bff96e5b2ec11adc8253d82551",
+				"dweb:/ipfs/QmarjXKMkfT4fScdX2DG1s5LJ6t8vKU17sKW152vNgfXMw"
+			]
+		},
+		"contracts/Ownable.sol": {
+			"keccak256": "0x824e1cfab9cb5bcc91f3652be7f5b77c986a03a394bf028aaab3d98131ee9027",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2191e9547de87d8f2472811ea127c88662420452400d21dcb3ea777b351ff7b4",
+				"dweb:/ipfs/QmWmNN9n4eJ571dBpZBfRgCg8RnF6zcW85DrYmqCBmFwuE"
+			]
+		},
+		"contracts/RoleAccess.sol": {
+			"keccak256": "0x9fc9df52914a321dfa5cbd37f05d21000e9b609ee4ae26669f0d08edf67d6fed",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5f4c60266947aac533927653ef4ed8139d57868616f1054763df5f8f9f05c895",
+				"dweb:/ipfs/QmVdELJQimme75q5ntWsUSfWSRHQtbheAa6g4HNt9Uzovn"
+			]
+		}
+	},
+	"version": 1
+}

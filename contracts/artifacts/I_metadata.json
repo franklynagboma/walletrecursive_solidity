@@ -1,0 +1,44 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/walletrecursivecontract/IBankContract.sol": "I"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/walletrecursivecontract/IBankContract.sol": {
+			"keccak256": "0x00b278d3e7b0b9784fa9256429cbb36edd96ef28c56c7b75179983255f045088",
+			"urls": [
+				"bzz-raw://53fd891b3f8dfe9ecfbf14ecd3d5f5c0ffaf3f9845867f6dfb591d27211452c5",
+				"dweb:/ipfs/QmPCXAYGmkaZe2Gj6Ws2ZFeCbyKxThSQZTGoDwFYFtRkA9"
+			]
+		}
+	},
+	"version": 1
+}

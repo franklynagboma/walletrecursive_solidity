@@ -1,0 +1,83 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "sentAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "errorMsg",
+						"type": "string"
+					}
+				],
+				"name": "InvalidAddress",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "senderAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "receiverAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "MoneySentFailed",
+				"type": "error"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/IErrorHandler.sol": "IErrorHandler"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/IErrorHandler.sol": {
+			"keccak256": "0x4e601b871c27822d4f1572cf1ca3942726e200afc35c381f084c20ac79efd7f3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c07326e26bd3296265d826efe8e99fbffa167546613972660e41e63641800d97",
+				"dweb:/ipfs/QmawUF8EbSvM7ZNnzEP5pYwNbtZorvZLF1Z91Y5t8PMkP6"
+			]
+		}
+	},
+	"version": 1
+}

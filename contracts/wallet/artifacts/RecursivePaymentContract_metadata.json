@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/wallet/RecursivePaymentContract.sol": "RecursivePaymentContract"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/wallet/RecursivePaymentContract.sol": {
+			"keccak256": "0x325a632d89dbcc6f202d18e19a4b7a765ab5f04d7b8d4bdbdb2c2ad44568419d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b6b3613a5cfd5a3c36b856276675d1839061964d91ff51690d2cb6d3052ccb6d",
+				"dweb:/ipfs/QmdXpMQNLmY4tZZULaiAoJKXXz1Zf6fDT1JjfLnSC1WRZC"
+			]
+		}
+	},
+	"version": 1
+}

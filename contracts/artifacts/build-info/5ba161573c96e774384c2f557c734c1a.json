@@ -1,0 +1,347 @@
+{
+	"id": "5ba161573c96e774384c2f557c734c1a",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.26",
+	"solcLongVersion": "0.8.26+commit.8a97fa7a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/IErrorHandler.sol": {
+				"content": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.26;\n\ninterface IErrorHandler {\n    error MoneySentFailed(address senderAddress, address receiverAddress, uint256 amount);\n    error InvalidAddress(address sentAddress, string errorMsg);\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/IErrorHandler.sol": {
+				"IErrorHandler": {
+					"abi": [
+						{
+							"inputs": [
+								{
+									"internalType": "address",
+									"name": "sentAddress",
+									"type": "address"
+								},
+								{
+									"internalType": "string",
+									"name": "errorMsg",
+									"type": "string"
+								}
+							],
+							"name": "InvalidAddress",
+							"type": "error"
+						},
+						{
+							"inputs": [
+								{
+									"internalType": "address",
+									"name": "senderAddress",
+									"type": "address"
+								},
+								{
+									"internalType": "address",
+									"name": "receiverAddress",
+									"type": "address"
+								},
+								{
+									"internalType": "uint256",
+									"name": "amount",
+									"type": "uint256"
+								}
+							],
+							"name": "MoneySentFailed",
+							"type": "error"
+						}
+					],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sentAddress\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"errorMsg\",\"type\":\"string\"}],\"name\":\"InvalidAddress\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"senderAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"receiverAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"MoneySentFailed\",\"type\":\"error\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/IErrorHandler.sol\":\"IErrorHandler\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/IErrorHandler.sol\":{\"keccak256\":\"0x4e601b871c27822d4f1572cf1ca3942726e200afc35c381f084c20ac79efd7f3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c07326e26bd3296265d826efe8e99fbffa167546613972660e41e63641800d97\",\"dweb:/ipfs/QmawUF8EbSvM7ZNnzEP5pYwNbtZorvZLF1Z91Y5t8PMkP6\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/IErrorHandler.sol": {
+				"ast": {
+					"absolutePath": "contracts/IErrorHandler.sol",
+					"exportedSymbols": {
+						"IErrorHandler": [
+							16
+						]
+					},
+					"id": 17,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"0.8",
+								".26"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "32:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "IErrorHandler",
+							"contractDependencies": [],
+							"contractKind": "interface",
+							"fullyImplemented": true,
+							"id": 16,
+							"linearizedBaseContracts": [
+								16
+							],
+							"name": "IErrorHandler",
+							"nameLocation": "67:13:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"errorSelector": "7e384b30",
+									"id": 9,
+									"name": "MoneySentFailed",
+									"nameLocation": "93:15:0",
+									"nodeType": "ErrorDefinition",
+									"parameters": {
+										"id": 8,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 3,
+												"mutability": "mutable",
+												"name": "senderAddress",
+												"nameLocation": "117:13:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 9,
+												"src": "109:21:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 2,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "109:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 5,
+												"mutability": "mutable",
+												"name": "receiverAddress",
+												"nameLocation": "140:15:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 9,
+												"src": "132:23:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 4,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "132:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 7,
+												"mutability": "mutable",
+												"name": "amount",
+												"nameLocation": "165:6:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 9,
+												"src": "157:14:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 6,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "157:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "108:64:0"
+									},
+									"src": "87:86:0"
+								},
+								{
+									"errorSelector": "f7693c3d",
+									"id": 15,
+									"name": "InvalidAddress",
+									"nameLocation": "184:14:0",
+									"nodeType": "ErrorDefinition",
+									"parameters": {
+										"id": 14,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 11,
+												"mutability": "mutable",
+												"name": "sentAddress",
+												"nameLocation": "207:11:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 15,
+												"src": "199:19:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 10,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "199:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 13,
+												"mutability": "mutable",
+												"name": "errorMsg",
+												"nameLocation": "227:8:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 15,
+												"src": "220:15:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_memory_ptr",
+													"typeString": "string"
+												},
+												"typeName": {
+													"id": 12,
+													"name": "string",
+													"nodeType": "ElementaryTypeName",
+													"src": "220:6:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_string_storage_ptr",
+														"typeString": "string"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "198:38:0"
+									},
+									"src": "178:59:0"
+								}
+							],
+							"scope": 17,
+							"src": "57:182:0",
+							"usedErrors": [
+								9,
+								15
+							],
+							"usedEvents": []
+						}
+					],
+					"src": "32:207:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

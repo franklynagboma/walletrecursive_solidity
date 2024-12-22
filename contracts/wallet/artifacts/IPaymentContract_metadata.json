@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/wallet/IPaymentContract.sol": "IPaymentContract"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/wallet/IPaymentContract.sol": {
+			"keccak256": "0xa3e6d60d974a4090eb2cc2f87c72a2438bae642fe0bf6f4dc1e3af2889947c34",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2522cb6679d42065f519164077ab60f7a244dfe66824c7c72fedf3e67bd1b9a4",
+				"dweb:/ipfs/QmdteYPKjmXVG9HDPJx2pRSnJZ1rDj1k883gYhEo8oPkx5"
+			]
+		}
+	},
+	"version": 1
+}

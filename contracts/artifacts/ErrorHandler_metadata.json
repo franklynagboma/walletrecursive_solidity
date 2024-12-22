@@ -1,0 +1,62 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "sentAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "errorMsg",
+						"type": "string"
+					}
+				],
+				"name": "InvalidAddress",
+				"type": "error"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/walletrecursivecontract/IErrorHandler.sol": "ErrorHandler"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/walletrecursivecontract/IErrorHandler.sol": {
+			"keccak256": "0xe8ce98e01eaa1b9c29a910c62f4d2fc06f9ecdbe55d4b3d31cf7f090d71c89ce",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d57a9dd6f398cf7fffec75f2cbe49f1ba4df7e4b7cf37c143638be7a464c77c1",
+				"dweb:/ipfs/QmZP7FgYnUQA8tiRERX1ketZZWgtFMhyizrRTbeGsxYrJb"
+			]
+		}
+	},
+	"version": 1
+}

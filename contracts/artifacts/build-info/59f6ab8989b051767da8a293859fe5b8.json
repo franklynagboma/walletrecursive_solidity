@@ -1,0 +1,337 @@
+{
+	"id": "59f6ab8989b051767da8a293859fe5b8",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.26",
+	"solcLongVersion": "0.8.26+commit.8a97fa7a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/IConstant.sol": {
+				"content": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.26;\n\nabstract contract IConstant {\n    bytes32 MSG_SENDER_ROLE = bytes32(\"MSG_SENDER_ROLE\");\n    bytes32 CAN_TRANSFER_MONEY = bytes32(\"CAN_TRANSFER_MONEY\");\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/IConstant.sol": {
+				"IConstant": {
+					"abi": [],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/IConstant.sol\":\"IConstant\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/IConstant.sol\":{\"keccak256\":\"0x7d9ccfec90d3fb7c1c17d588512983ffe10a82f05ce09823f28d65059f4aaa9e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9c96eb8227002fe7da78a8ec9562d7215d2898bc0eca236804ca0e381d560981\",\"dweb:/ipfs/QmYmf7DAMH6fXUUXwxz1YfiMu1ZoiDpUYydJ3RrKL4UrDV\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [
+							{
+								"astId": 7,
+								"contract": "contracts/IConstant.sol:IConstant",
+								"label": "MSG_SENDER_ROLE",
+								"offset": 0,
+								"slot": "0",
+								"type": "t_bytes32"
+							},
+							{
+								"astId": 13,
+								"contract": "contracts/IConstant.sol:IConstant",
+								"label": "CAN_TRANSFER_MONEY",
+								"offset": 0,
+								"slot": "1",
+								"type": "t_bytes32"
+							}
+						],
+						"types": {
+							"t_bytes32": {
+								"encoding": "inplace",
+								"label": "bytes32",
+								"numberOfBytes": "32"
+							}
+						}
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/IConstant.sol": {
+				"ast": {
+					"absolutePath": "contracts/IConstant.sol",
+					"exportedSymbols": {
+						"IConstant": [
+							14
+						]
+					},
+					"id": 15,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"0.8",
+								".26"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "32:23:0"
+						},
+						{
+							"abstract": true,
+							"baseContracts": [],
+							"canonicalName": "IConstant",
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": true,
+							"id": 14,
+							"linearizedBaseContracts": [
+								14
+							],
+							"name": "IConstant",
+							"nameLocation": "75:9:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"constant": false,
+									"id": 7,
+									"mutability": "mutable",
+									"name": "MSG_SENDER_ROLE",
+									"nameLocation": "99:15:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 14,
+									"src": "91:52:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_bytes32",
+										"typeString": "bytes32"
+									},
+									"typeName": {
+										"id": 2,
+										"name": "bytes32",
+										"nodeType": "ElementaryTypeName",
+										"src": "91:7:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_bytes32",
+											"typeString": "bytes32"
+										}
+									},
+									"value": {
+										"arguments": [
+											{
+												"hexValue": "4d53475f53454e4445525f524f4c45",
+												"id": 5,
+												"isConstant": false,
+												"isLValue": false,
+												"isPure": true,
+												"kind": "string",
+												"lValueRequested": false,
+												"nodeType": "Literal",
+												"src": "125:17:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_stringliteral_b4cbc58bf28917ba1b892e60cc1c789b834102c026bbe68d35436f001163d0cb",
+													"typeString": "literal_string \"MSG_SENDER_ROLE\""
+												},
+												"value": "MSG_SENDER_ROLE"
+											}
+										],
+										"expression": {
+											"argumentTypes": [
+												{
+													"typeIdentifier": "t_stringliteral_b4cbc58bf28917ba1b892e60cc1c789b834102c026bbe68d35436f001163d0cb",
+													"typeString": "literal_string \"MSG_SENDER_ROLE\""
+												}
+											],
+											"id": 4,
+											"isConstant": false,
+											"isLValue": false,
+											"isPure": true,
+											"lValueRequested": false,
+											"nodeType": "ElementaryTypeNameExpression",
+											"src": "117:7:0",
+											"typeDescriptions": {
+												"typeIdentifier": "t_type$_t_bytes32_$",
+												"typeString": "type(bytes32)"
+											},
+											"typeName": {
+												"id": 3,
+												"name": "bytes32",
+												"nodeType": "ElementaryTypeName",
+												"src": "117:7:0",
+												"typeDescriptions": {}
+											}
+										},
+										"id": 6,
+										"isConstant": false,
+										"isLValue": false,
+										"isPure": true,
+										"kind": "typeConversion",
+										"lValueRequested": false,
+										"nameLocations": [],
+										"names": [],
+										"nodeType": "FunctionCall",
+										"src": "117:26:0",
+										"tryCall": false,
+										"typeDescriptions": {
+											"typeIdentifier": "t_bytes32",
+											"typeString": "bytes32"
+										}
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": false,
+									"id": 13,
+									"mutability": "mutable",
+									"name": "CAN_TRANSFER_MONEY",
+									"nameLocation": "157:18:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 14,
+									"src": "149:58:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_bytes32",
+										"typeString": "bytes32"
+									},
+									"typeName": {
+										"id": 8,
+										"name": "bytes32",
+										"nodeType": "ElementaryTypeName",
+										"src": "149:7:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_bytes32",
+											"typeString": "bytes32"
+										}
+									},
+									"value": {
+										"arguments": [
+											{
+												"hexValue": "43414e5f5452414e534645525f4d4f4e4559",
+												"id": 11,
+												"isConstant": false,
+												"isLValue": false,
+												"isPure": true,
+												"kind": "string",
+												"lValueRequested": false,
+												"nodeType": "Literal",
+												"src": "186:20:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_stringliteral_8e4574c6bae70443b380947b6a9489bd772205a76c3d8b2a51550dac836a8d17",
+													"typeString": "literal_string \"CAN_TRANSFER_MONEY\""
+												},
+												"value": "CAN_TRANSFER_MONEY"
+											}
+										],
+										"expression": {
+											"argumentTypes": [
+												{
+													"typeIdentifier": "t_stringliteral_8e4574c6bae70443b380947b6a9489bd772205a76c3d8b2a51550dac836a8d17",
+													"typeString": "literal_string \"CAN_TRANSFER_MONEY\""
+												}
+											],
+											"id": 10,
+											"isConstant": false,
+											"isLValue": false,
+											"isPure": true,
+											"lValueRequested": false,
+											"nodeType": "ElementaryTypeNameExpression",
+											"src": "178:7:0",
+											"typeDescriptions": {
+												"typeIdentifier": "t_type$_t_bytes32_$",
+												"typeString": "type(bytes32)"
+											},
+											"typeName": {
+												"id": 9,
+												"name": "bytes32",
+												"nodeType": "ElementaryTypeName",
+												"src": "178:7:0",
+												"typeDescriptions": {}
+											}
+										},
+										"id": 12,
+										"isConstant": false,
+										"isLValue": false,
+										"isPure": true,
+										"kind": "typeConversion",
+										"lValueRequested": false,
+										"nameLocations": [],
+										"names": [],
+										"nodeType": "FunctionCall",
+										"src": "178:29:0",
+										"tryCall": false,
+										"typeDescriptions": {
+											"typeIdentifier": "t_bytes32",
+											"typeString": "bytes32"
+										}
+									},
+									"visibility": "internal"
+								}
+							],
+							"scope": 15,
+							"src": "57:153:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "32:178:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
