@@ -5,7 +5,6 @@ node_modules/
 artifacts/
 *.sol.json
 *.dbg.json
-*.json
 
 # Ignore Remix-specific files
 .states/
@@ -14,3 +13,4 @@ vm-cancun
 # Ignore OS-specific files
 .DS_Store
 Thumbs.db
+.deps/
