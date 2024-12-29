@@ -66,12 +66,11 @@ contract AllocationWallet is Ownable, IAllocationWallet {
         require(walletData.isWalletAddressesAdded[walletAddress], "Address not in wallet, add address to wallet.");
         require(amount > 0, "Invalid amount.");
 
-        uint256 amountInEther = amount * 1 ether;
-        require(_checkIfBankBalanceIsSufficient(amountInEther), "Insufficient balance in bank account.");
+        require(_checkIfBankBalanceIsSufficient(amount), "Insufficient balance in bank account.");
 
-        walletData.allocateAmountByAddresses[walletAddress] += amountInEther;
-        walletData.totalAllocatedBalance += amountInEther;
-        emit AmountAllocatedToWallet({allocatedAddress: walletAddress, amount: amountInEther});
+        walletData.allocateAmountByAddresses[walletAddress] += amount;
+        walletData.totalAllocatedBalance += amount;
+        emit AmountAllocatedToWallet(walletAddress, amount);
         
         bankContract.syncAllocatedAddress(walletAddress);
     }
@@ -85,12 +84,11 @@ contract AllocationWallet is Ownable, IAllocationWallet {
         require(_walletHasAddress(to), "Not eligible, you are not part of the allocated address.");
 
         uint256 allocatedAmount = _viewWalletAllocation(to);
-        uint256 amountInEther = amount * 1 ether;
-        require(allocatedAmount >= amountInEther, "Insufficient allocation, try reduce your withdrawal amount.");
+        require(allocatedAmount >= amount, "Insufficient allocation, try reduce your withdrawal amount.");
 
         bankContract.transferToAddress(to, amount);
-        walletData.allocateAmountByAddresses[to] -= amountInEther;
-        walletData.totalAllocatedBalance -= amountInEther;
+        walletData.allocateAmountByAddresses[to] -= amount;
+        walletData.totalAllocatedBalance -= amount;
     }
 
     function owner() external view returns (address) {
@@ -116,8 +114,8 @@ contract AllocationWallet is Ownable, IAllocationWallet {
         return walletData.allocateAmountByAddresses[walletAddress];
     }
 
-    function _checkIfBankBalanceIsSufficient(uint256 amountInEther) private view returns (bool) {
-        return address(bankContract).balance >= (walletData.totalAllocatedBalance + amountInEther);
+    function _checkIfBankBalanceIsSufficient(uint256 amount) private view returns (bool) {
+        return address(bankContract).balance >= (walletData.totalAllocatedBalance + amount);
     }
 
     function _addNewAddress(address newAddress) private {

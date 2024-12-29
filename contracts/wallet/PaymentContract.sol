@@ -4,28 +4,27 @@ pragma solidity 0.8.26;
 import "./IAllocationWallet.sol";
 import "./IPaymentContract.sol";
 import "../Ownable.sol";
-import "../IErrorHandler.sol";
 
-contract PaymentContract is IPaymentContract, IErrorHandler, Ownable {
+contract PaymentContract is IPaymentContract, Ownable {
 
-    IAllocationWallet private allocationWallet;
-    address payable private bankContract;
+    IAllocationWallet private _allocationWallet;
+    address payable private _bankContract;
     mapping (address => uint256) private _addressAmountSentToContract;
 
     constructor() Ownable(msg.sender){}
 
     function setAllocationContract(address allocationWalletContractAddress) external {
-        allocationWallet = IAllocationWallet(allocationWalletContractAddress);
+        _allocationWallet = IAllocationWallet(allocationWalletContractAddress);
     }
 
     function viewAddressAllocation() external view returns (bool, uint256) {
-        _checkAddress(address(allocationWallet));
-        return allocationWallet.viewWalletAddedWithAllocation(msg.sender);
+        _checkAddress(address(_allocationWallet));
+        return _allocationWallet.viewWalletAddedWithAllocation(msg.sender);
     }
 
     function withdrawMoney(uint256 amount) external {
-        _checkAddress(address(allocationWallet));
-        allocationWallet.withdrawFromBankContractTo(amount);
+        _checkAddress(address(_allocationWallet));
+        _allocationWallet.withdrawFromBankContractTo(amount);
     }
 
     function owner() external view returns (address) {

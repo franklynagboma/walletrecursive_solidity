@@ -20,14 +20,13 @@ contract BankAccountContract is IBankContract, IErrorHandler, Ownable {
     constructor() Ownable(msg.sender) {}
 
     function transferToAddress(address to, uint256 amountToSend) external onlyAuthorized(to) {
-        uint256 amountToSendInEth = amountToSend * 1 ether;
-        require(address(this).balance >= amountToSendInEth, "Insufficient balance.");
+        require(address(this).balance >= amountToSend, "Insufficient balance.");
 
-        _transferMoney(payable (to), amountToSendInEth);
+        _transferMoney(payable (to), amountToSend);
     }
 
     function transferAll(address to) external onlyOwner {
-        uint256 totalBalance = address(this).balance; // balance is in eth
+        uint256 totalBalance = address(this).balance; // balance is in wei
         require(totalBalance > 0, "Insufficient balance.");
 
         _transferMoney(payable (to), totalBalance);
@@ -46,12 +45,12 @@ contract BankAccountContract is IBankContract, IErrorHandler, Ownable {
         emit NewAllocatedAddressForWithdrawal(allocated, block.timestamp);
     }
     
-    function _transferMoney(address payable to, uint256 amountToSendInEth) private {
-        (bool isSuccess, ) = to.call{value: amountToSendInEth, gas: 25000000}("");
+    function _transferMoney(address payable to, uint256 amountToSend) private {
+        (bool isSuccess, ) = to.call{value: amountToSend, gas: 25000000}("");
         if (isSuccess) {
-            emit MoneySentToAddress({senderAddress: msg.sender, receiverAddress: to, amount: amountToSendInEth});
+            emit MoneySentToAddress({senderAddress: msg.sender, receiverAddress: to, amount: amountToSend});
         } else {
-            revert MoneySentFailed({senderAddress: msg.sender, receiverAddress: to, amount: amountToSendInEth});
+            revert MoneySentFailed({senderAddress: msg.sender, receiverAddress: to, amount: amountToSend});
         }
     }
 
