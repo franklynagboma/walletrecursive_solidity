@@ -12,5 +12,6 @@ vm-cancun
 
 # Ignore OS-specific files
 .DS_Store
+contract/.DS_Store
 Thumbs.db
 .deps/
